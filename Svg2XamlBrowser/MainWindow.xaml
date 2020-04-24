@@ -74,10 +74,14 @@
 
     <DockPanel Grid.Column="2">
       <DockPanel DockPanel.Dock="Top" Margin="0,0,0,2">
-        <TextBox Name="ThumbnailSizeTextBox" Text="{Binding ElementName=this,Path=ThumbnailSize}" KeyDown="ThumbnailSizeTextBox_KeyDown" />
-      </DockPanel>
+                <WrapPanel>
+                <TextBlock Text="Size:" />
+                <TextBox Name="ThumbnailSizeTextBox" Text="{Binding ElementName=this,Path=ThumbnailSize}" KeyDown="ThumbnailSizeTextBox_KeyDown" Width="100" />
+                    <!--<Button Content="导出为Xaml" Width="100"/>-->
+                </WrapPanel>
+            </DockPanel>
       <ListBox Name="DirectoryEntriesListBox"
-               Margin="0,2,0,0"
+               Margin="0,2,0,0" SelectionMode="Multiple"
              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
         <ListBox.ItemsPanel>
           <ItemsPanelTemplate>
